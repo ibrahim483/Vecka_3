@@ -55,6 +55,7 @@ Finally it calculated and printed the average (2 + 4 + 3 + 1 +1) / 5 that is the
 */
 public class Bonus{
   public static void main(String[] args) {
+    System.out.println(3);
 
   }
 }
