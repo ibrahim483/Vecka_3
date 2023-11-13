@@ -39,6 +39,7 @@ public class E1{
     int trials = Integer.parseInt(args[0]);
     int dices  = Integer.parseInt(args[1]);
     // your code here
+    System.out.println("print");
 
   }
 }
