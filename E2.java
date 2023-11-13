@@ -31,7 +31,14 @@ public class E2{
   public static void main(String[] args) {
     int n = Integer.parseInt(args[0]);
     Scanner data = new Scanner(System.in);
-    // Your code here
+    int total = 0;
 
+    System.out.println(data);
+    while (data.hasNext()) {
+      if (data.nextInt() == n) {
+        total++;
+      }
+    }
+    System.out.println("number " + n +" occurred "+ total +" times");
   }
 }
