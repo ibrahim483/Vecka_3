@@ -35,11 +35,24 @@ to a file as follows:
 */
 
 public class E1{
+
   public static void main(String[] args) {
     int trials = Integer.parseInt(args[0]);
     int dices  = Integer.parseInt(args[1]);
     // your code here
-    System.out.println("print");
+    if ( trials > 0 && dices>0) {
+      System.out.println(trials);
+      System.out.println(dices);
+    }
+
+
+    for (int i = 0 ; i < trials; i++){
+      for (int b = 0 ; b < dices; b++){
+        int cast = (int)(Math.random()*6)+1;
+        System.out.print(cast + " ");
+      }
+      System.out.println(" ");
+    }
 
   }
 }
