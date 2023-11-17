@@ -35,11 +35,22 @@ terminate quietly.
 
  Make sure your program has this behaviour.
 */
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class E3{
   public static void main(String[] args) {
     Scanner data = new Scanner(System.in);
-    // Your code here.
+    int count = 0;
+    int number  = data.nextInt();
+
+    while (data.hasNext()){
+
+      if (data.nextInt()==number){
+        count++;
+      }
+    }
+    System.out.println("The number is "+ number + " and it is oucerd " + count + " times");
+    }
   }
-}
