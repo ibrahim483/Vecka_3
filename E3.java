@@ -50,6 +50,6 @@ public class E3{
         count++;
       }
     }
-    System.out.println("The number is "+ number + " and it is oucerd " + count + " times");
+    System.out.println("The number is "+ number + " and it is oucerd " + count + " times.");
     }
   }
