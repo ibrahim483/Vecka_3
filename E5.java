@@ -29,7 +29,26 @@ import java.util.Scanner;
 public class E5{
   public static void main(String[] args) {
     int n = Integer.parseInt(args[0]);
-    Scanner data = new Scanner(System.in);    
-    // Your code here
+    Scanner data = new Scanner(System.in);
+    double[] numbers = new double[n];
+    double nextNumber ;
+    int countNumbers =0;
+    double sum = 0.0;
+
+    for (int i = 0; i < n ; i++) {
+      nextNumber = data.nextDouble();
+      numbers[i]= nextNumber;
+      sum +=nextNumber;
+
+    }
+
+    double avg = sum/n;
+    for (int i = 0; i < n ; i++) {
+      if (avg < numbers[i]) {
+        countNumbers++;
+      }
+    }
+
+    System.out.println( countNumbers+ " Of "+ n+ " values were above the average "+ avg);
   }
 }
