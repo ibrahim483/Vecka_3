@@ -3,10 +3,10 @@ The program uses standard input to read
   two integers N and M
 and
   N x M integers between 1 and 6.
-(This is how the output of exercise E1 looks like:
+This is how the output of exercise E1 looks like:
     N was the number of trials and 
     M was the number of dices used in each trial.
-)
+
 
 The program prints the sum of dices in a trial that occurrs more often
 and how often it occurs.
@@ -46,6 +46,32 @@ occurs in the sequence of trials.
 import java.util.Scanner;
 public class E6{
   public static void main(String[] args) {
-    // Your code here
+
+    Scanner data = new Scanner(System.in);
+
+    int trials = data.nextInt();
+    int dices = data.nextInt();
+
+    int total = 0;
+    int [] fixar = new int[1 + (dices * 6)];
+    int length = 0;
+    int mass = 0;
+
+    for (int i = 0; i < trials; i++){
+      for (int i1 = 0; i1 < dices; i1 ++) {
+        total += data.nextInt();
+      }
+      fixar[total]++;
+      total = 0;
+
+    }
+    for (int i = 0; i<fixar.length; i++){
+      if (fixar[i]> mass){
+        length = i;
+        mass = fixar[i];
+      }
+    }
+    System.out.println(" The most frequent sum is " + length);
+    System.out.println(" It occurs " + mass +  " " + "times ");
   }
 }

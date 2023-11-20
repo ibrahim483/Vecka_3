@@ -53,6 +53,14 @@ public class E7{
     // the permutation is now in the array permutation!
 
     // Your code here
+    int count = 0 ;
+    for (int i = 0; i < n; i++){
+      System.out.println(i + " " + permutation[i]);
+      if (i == permutation[i]){
+        count += 1;
+      }
+    }
+    System.out.println(count + " elements are in place");
 
   }
 }
