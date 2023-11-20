@@ -24,7 +24,17 @@ Your task is to complete the program after
 import java.util.Scanner;
 public class E4{
   public static void main(String[] args) {
+
       Scanner data = new Scanner(System.in);
-      // Your code here
+      int current = data.nextInt();
+      System.out.print(current + " ");
+
+      while (data.hasNextInt()){
+          if (current != data.nextInt()){
+               current = data.nextInt();
+              System.out.print(current + " ");
+          }
+      }
+
   }
 }
